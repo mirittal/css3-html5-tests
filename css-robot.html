@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<head>
+<style>
+
+div {
+    margin:0 auto;
+}
+
+.head {
+  background: -moz-radial-gradient(circle, #800080 15%, transparent 40%), #f964a2;
+  background: -webkit-radial-gradient(circle, #800080 15%, transparent 40%), #f964a2;
+  background:radial-gradient(circle, white 15%, transparent 40%), #f964a2;
+  width:150px;
+  height:150px;
+  background-size:75px 150px;
+  background-color:#f964a2;
+  border-radius:60px 60px 10px 10px;
+  border-bottom:40px double #666;
+  
+   -webkit-animation: blink 10s infinite;
+  -moz-animation:    blink 10s infinite;
+  -o-animation:      blink 10s infinite;
+  animation:         blink 10s infinite;
+}
+
+@keyframes blink {
+  50% {
+    background-color:#800080;
+  }
+}
+
+@-webkit-keyframes blink{
+  50% {
+     background-color:#800080;
+  
+  }
+}
+
+.body {
+  height:0;
+  width:70px;  
+  border-bottom: 200px solid #f964a2;  
+  border-top: 100px solid #f964a2;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;    
+  z-index:5;
+  position:relative; 
+   -webkit-animation: colorize 10s infinite;
+  -moz-animation:    colorize 10s infinite;
+  -o-animation:      colorize 10s infinite;
+  animation:         colorize 10s infinite;
+}
+
+@keyframes colorize {
+  50% {
+    border-bottom: 200px solid #ffc3e1;  
+    border-top: 100px solid #ffc3e1;
+  }
+}
+
+@-webkit-keyframes colorize{
+  50% {
+    border-bottom: 200px solid #ffc3e1;  
+    border-top: 100px solid #ffc3e1;
+  
+  }
+}
+
+.foots {  
+  width:300px;
+  text-align: center;
+  line-height:70px;
+  margin-top:-20px;
+  z-index:0;
+  position:relative;
+}
+
+.foots i {  
+  font-size:120px;
+  line-height:70px;
+  height:40px;
+  color:rgb(237, 84, 131);
+  font-weight:bold;
+  font-family:Arial;
+  margin:5px;
+  font-style: normal;  
+  text-shadow: 0px 13px 0px #800080;
+}
+
+.foots i:first-child {  
+-moz-transform: scale(-1, 1);
+-webkit-transform: scale(-1, 1);
+-o-transform: scale(-1, 1);
+-ms-transform: scale(-1, 1);
+transform: scale(-1, 1);
+ display:inline-block;
+
+}
+
+.antena {
+  height:0;
+  width:5px;      
+  border: 5px solid transparent;  
+  border-bottom: 80px solid #888;
+  border-top:10px solid #777;
+  border-radius:5px 5px 0px 0px;
+  margin-top:30px;
+  position: relative;
+  z-index: 5;
+}
+
+.signal {
+  -moz-border-radius: 60px/60px;
+    -webkit-border-radius: 60px 60px;
+    border-radius: 60px/60px;;
+    border:solid 2px #000; 
+    width:60px;
+    height:60px;   
+    position: absolute;
+    top:10px;
+    left: calc(50% - 30px);
+    display:block;
+    z-index: 0;
+   -webkit-animation: signal 5s infinite;
+  -moz-animation:    signal 5s infinite;
+  -o-animation:      signal 5s infinite;
+  animation:         signal 5s infinite;
+}
+
+@keyframes signal {
+  50% {
+    transform: scale(1);
+  
+  }
+}
+
+@-webkit-keyframes signal{
+  50% {
+     -webkit-transform: scale(1.6);
+  
+  }
+}
+
+.signal:before {
+  -moz-border-radius: 50px/50px;
+    -webkit-border-radius: 50px 50px;
+    border-radius: 50px/50px;
+    border:solid 2px #444; 
+    width:50px;
+    height:50px;
+    display:block;
+    content: "";       
+    position: absolute;
+    top:3px;
+    left:3px;
+}
+
+.signal:after {
+  -moz-border-radius: 70px/70px;
+    -webkit-border-radius: 70px 70px;
+    border-radius: 70px/70px;
+    border:solid 2px #444; 
+    width:70px;
+    height:70px;
+    display:block;
+    content: "";       
+    position: absolute;
+    top:-7px;
+    left:-7px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="signal"></div>
+  <div class="antena"></div>
+
+  <div class="head"></div>
+  <div class="body"></div>
+  <div class="foots">
+    <i>L</i>
+    <i>L</i>
+  </div>
+
+</body>
